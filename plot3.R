@@ -8,7 +8,8 @@ data <- read.table("data/household_power_consumption.txt", sep= ";", header= TRU
                    stringsAsFactors = FALSE, na.strings= "?")
 data <- data[(data$Date == "1/2/2007" | data$Date == "2/2/2007"), ]
 
-## Change format to useful Date/Time format and add Weekdaysdata$DateTime <- paste(data$Date, data$Time, sep=" ")
+## Change format to useful Date/Time format and add Weekdays
+data$DateTime <- paste(data$Date, data$Time, sep=" ")
 data$DateTime <- strptime(data$DateTime, "%d/%m/%Y %H:%M:%S")
 data$WeekDay <- weekdays(data$DateTime)
 
