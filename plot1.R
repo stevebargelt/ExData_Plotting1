@@ -1,4 +1,4 @@
-# Coursera exdata-004
+# Coursera exdata-004 - stevebargelt
 # Household electric power consumption - Exploratory plots
 
 # Load data into R, 
